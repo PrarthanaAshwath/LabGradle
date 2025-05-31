@@ -1,9 +1,9 @@
 pipeline {
-    agent any 
+    agent any  
 
     tools {
-        gradle:'gradle' 
-        jdk:'jdk'
+        gradle 'gradle'  
+        jdk 'jdk'
     }
     stages {
         stage('Checkout') {
@@ -20,12 +20,16 @@ pipeline {
 
         stage('Test') {
             steps {
-                sh 'gradle test' 
+                sh 'gradle test'  
             }
         }
 
+        
+        
+       
         stage('Run Application') {
             steps {
+                
                 sh 'gradle run'
             }
         }
