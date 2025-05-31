@@ -2,8 +2,8 @@ pipeline {
     agent any 
 
     tools {
-        gradle 'gradle' 
-        jdk 'jdk'
+        gradle:'gradle' 
+        jdk:'jdk'
     }
     stages {
         stage('Checkout') {
